@@ -571,13 +571,74 @@ body footer .social a {
     height: 340px;
   }
   body .container .about .services .car-img img {
-    left: -65px;
+    left: -50px;
   }
   body .container .about .services .service-describe {
     width: 100%;
+    padding: 0 30px;
+  }
+  body .container .about .services .service-describe h3 {
+    text-align: start;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 26px;
   }
   body .container .about .services .service-describe .best {
     width: 100%;
     text-align: center;
+  }
+  body .container .products {
+    padding: 0 30px;
+  }
+  body .container .products h3 {
+    font-size: 26px;
+    line-height: 44px;
+  }
+  body .container .products .swiper {
+    padding: 0 20px;
+  }
+  body .container .products .swiper .swiper-slide {
+    height: 390px;
+    gap: 15px;
+  }
+  body .container .products .swiper .swiper-button-next {
+    left: 60%;
+  }
+  body .container .products .swiper .swiper-button-prev {
+    left: 30%;
+  }
+  body .container .contact {
+    padding: 0 30px;
+  }
+  body .container .contact h3 {
+    font-size: 30px;
+  }
+  body .container .contact form {
+    padding: 0;
+  }
+  body .container .contact form .form-group {
+    gap: 60px;
+    flex-direction: column;
+  }
+  body .container .contact form .form-group .input-field {
+    width: 100%;
+  }
+  body .container .contact form button {
+    align-self: flex-start;
+    width: 100%;
+  }
+  body footer {
+    padding: 0 30px;
+  }
+  body footer .nav-links {
+    gap: 20px;
+  }
+  body footer .social {
+    gap: 30px;
+  }
+  body footer .inner {
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 40px;
   }
 }/*# sourceMappingURL=main.css.map */
