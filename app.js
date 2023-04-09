@@ -48,6 +48,7 @@ menu.addEventListener("click", () => {
     link.addEventListener("click", () => {
       document.querySelector("nav").classList.remove("opened");
       menu.classList.remove("open");
+      document.querySelector("body").classList.remove("noscroll");
     });
   });
 });
