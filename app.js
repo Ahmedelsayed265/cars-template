@@ -38,3 +38,15 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+let menu = document.querySelector(".menu");
+let links = document.querySelectorAll(".nav-link a");
+menu.addEventListener("click", () => {
+  menu.classList.toggle("open");
+  document.querySelector("body").classList.toggle("noscroll");
+  document.querySelector("nav").classList.toggle("opened");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      document.querySelector("nav").classList.remove("opened");
+    });
+  });
+});

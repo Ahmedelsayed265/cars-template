@@ -56,9 +56,21 @@ $shad: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
+  &.noscroll {
+    overflow: hidden !important;
+  }
   nav {
+    &.opened {
+      height: 100vh;
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        @include centerAbsolute();
+      }
+    }
     background-color: $gray;
     @include space-between();
+    align-items: unset;
     padding: 30px 100px;
     width: 100%;
     position: fixed;
@@ -72,6 +84,7 @@ body {
     }
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 30px;
       .nav-link {
         position: relative;
@@ -113,6 +126,39 @@ body {
         color: $white;
         background-color: $orange;
         box-shadow: $shad;
+      }
+    }
+    .menu {
+      width: 42px;
+      height: 42px;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+      cursor: pointer;
+      display: none;
+      gap: 10px;
+      &.open {
+        position: relative;
+        span {
+          position: absolute;
+          transition: transform .5s ease-in-out;
+          &:nth-child(1) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            width: 38px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      span {
+        display: inline-block;
+        width: 38px;
+        height: 2px;
+        background-color: #000000;
+        &:nth-child(2) {
+          width: 28px;
+        }
       }
     }
   }
@@ -517,6 +563,9 @@ body {
       }
       .btns {
         display: none;
+      }
+      .menu {
+        display: flex;
       }
     }
     .container {
