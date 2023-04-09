@@ -47,6 +47,7 @@ menu.addEventListener("click", () => {
   links.forEach(link => {
     link.addEventListener("click", () => {
       document.querySelector("nav").classList.remove("opened");
+      menu.classList.remove("open");
     });
   });
 });
